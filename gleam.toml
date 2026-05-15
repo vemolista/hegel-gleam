@@ -1,0 +1,26 @@
+name = "hegel_gleam"
+
+version = "0.0.1"
+licences = ["MIT"]
+description = "A property-based testing library for Gleam. Backed by Hypothesis, using the Hegel protocol."
+
+repository = { type = "github", user = "vemolista", repo = "hegel-gleam" }
+
+[dependencies]
+gleam_stdlib = ">= 1.0.0 and < 2.0.0"
+gleam_erlang = ">= 1.3.0 and < 2.0.0"
+gleam_otp = ">= 1.2.0 and < 2.0.0"
+gbor = ">= 1.0.0 and < 2.0.0"
+gzlib = ">= 2.0.0 and < 3.0.0"
+exception = ">= 2.1.0 and < 3.0.0"
+logging = ">= 1.5.0 and < 2.0.0"
+envoy = ">= 1.1.0 and < 2.0.0"
+
+[dev_dependencies]
+gleeunit = ">= 1.10.0 and < 2.0.0"
+gleescript = ">= 1.5.2 and < 2.0.0"
+argv = ">= 1.0.2 and < 2.0.0"
+simplifile = ">= 2.4.0 and < 3.0.0"
+
+[erlang]
+application_start_module = "hegel/internal/app"

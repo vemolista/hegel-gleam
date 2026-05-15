@@ -1,0 +1,14 @@
+*.beam
+*.ez
+/build
+erl_crash.dump
+
+/temp
+
+.DS_Store
+
+.hegel
+
+/references
+
+__pycache__

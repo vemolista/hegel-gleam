@@ -1,0 +1,501 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "schema-version": "1.11.0",
+    "install": {
+      "erlang": {
+        "pkg-path": "erlang"
+      },
+      "gleam": {
+        "pkg-path": "gleam"
+      },
+      "just": {
+        "pkg-path": "just"
+      },
+      "uv": {
+        "pkg-path": "uv"
+      }
+    },
+    "hook": {},
+    "profile": {},
+    "options": {}
+  },
+  "packages": [
+    {
+      "attr_path": "erlang",
+      "broken": false,
+      "derivation": "/nix/store/v2ap7bbswcv6xfk7n28g21j76vdgsjkf-erlang-28.4.1.drv",
+      "description": "Programming language used for massively scalable soft real-time systems",
+      "install_id": "erlang",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "erlang-28.4.1",
+      "pname": "erlang",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T03:37:20.443497Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "28.4.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/25b1ki4ylj101ynmihq1plnc47n21b8a-erlang-28.4.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "erlang",
+      "broken": false,
+      "derivation": "/nix/store/67a7n911y47w5nfxd92pky4ah3qv3k22-erlang-28.4.1.drv",
+      "description": "Programming language used for massively scalable soft real-time systems",
+      "install_id": "erlang",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "erlang-28.4.1",
+      "pname": "erlang",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T04:09:55.024837Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "28.4.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/13arkm7jv8mh3rd7lbvplxdvxh36b2ma-erlang-28.4.1"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "erlang",
+      "broken": false,
+      "derivation": "/nix/store/fsgdb9lnlz6n4dqhy1v2ldp4inv0yhyy-erlang-28.4.1.drv",
+      "description": "Programming language used for massively scalable soft real-time systems",
+      "install_id": "erlang",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "erlang-28.4.1",
+      "pname": "erlang",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T04:40:39.608933Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "28.4.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/a3s8cvnj5nlqj2694g5rznxb4cq36ci0-erlang-28.4.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "erlang",
+      "broken": false,
+      "derivation": "/nix/store/rg4snvw4dk96v4szid425c4q25kwlfkg-erlang-28.4.1.drv",
+      "description": "Programming language used for massively scalable soft real-time systems",
+      "install_id": "erlang",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "erlang-28.4.1",
+      "pname": "erlang",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T05:16:15.448518Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "28.4.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/q226yxg6vsi5cq2nrp6nkz0ys7hyccf6-erlang-28.4.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gleam",
+      "broken": false,
+      "derivation": "/nix/store/xh911qdx04zxn5jaci33nhkjgdw3z1ra-gleam-1.15.2.drv",
+      "description": "Statically typed language for the Erlang VM",
+      "install_id": "gleam",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "gleam-1.15.2",
+      "pname": "gleam",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T03:37:20.872880Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.15.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/9yr5rdvlvyf0rbcvl99lgy4snqp87d41-gleam-1.15.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gleam",
+      "broken": false,
+      "derivation": "/nix/store/0bxpy36vvykdfgpy9ndrbs493vxjg164-gleam-1.15.2.drv",
+      "description": "Statically typed language for the Erlang VM",
+      "install_id": "gleam",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "gleam-1.15.2",
+      "pname": "gleam",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T04:09:55.714313Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.15.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/c9zv8ga94176f5digkdhi5384fsr1ziw-gleam-1.15.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gleam",
+      "broken": false,
+      "derivation": "/nix/store/fmvwj5fxcq1h7w943yfay03wn8iss865-gleam-1.15.2.drv",
+      "description": "Statically typed language for the Erlang VM",
+      "install_id": "gleam",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "gleam-1.15.2",
+      "pname": "gleam",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T04:40:40.054194Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.15.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/4s2n1dy60yqbnxblh0hp9q0n7b74xfjk-gleam-1.15.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gleam",
+      "broken": false,
+      "derivation": "/nix/store/hk86vdlsxkj3lvca71yh86cj19nbwjh9-gleam-1.15.2.drv",
+      "description": "Statically typed language for the Erlang VM",
+      "install_id": "gleam",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "gleam-1.15.2",
+      "pname": "gleam",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T05:16:16.267553Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.15.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/nkh2p2crf3nyjnrgl29cg5g6w4nccym2-gleam-1.15.2"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "just",
+      "broken": false,
+      "derivation": "/nix/store/0y655zjd8bc6hbcmb3b3hwc1v4ch75jd-just-1.48.0.drv",
+      "description": "Handy way to save and run project-specific commands",
+      "install_id": "just",
+      "license": "CC0-1.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "just-1.48.0",
+      "pname": "just",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T03:37:36.178519Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.48.0",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/s5hs8gkjdfxgkwyv3js0cqfvf9z48cl1-just-1.48.0-doc",
+        "man": "/nix/store/86nnfm1qddgms54n6z9nd3fjn8bf78mc-just-1.48.0-man",
+        "out": "/nix/store/pni3dli7zhi705kk1y6kz0a7yda441w5-just-1.48.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "just",
+      "broken": false,
+      "derivation": "/nix/store/m03f31vj5kqrvnpry980vj4vl1pr604l-just-1.48.0.drv",
+      "description": "Handy way to save and run project-specific commands",
+      "install_id": "just",
+      "license": "CC0-1.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "just-1.48.0",
+      "pname": "just",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T04:10:16.461755Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.48.0",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/ppv28k8gvilw72qwbn9wfz7qvwfrprcb-just-1.48.0-doc",
+        "man": "/nix/store/c76zyj87svhxkwcd0mz6vzfgydvy3ddf-just-1.48.0-man",
+        "out": "/nix/store/rwav6xpxmc78lwrr8q9aracmfhpadfdr-just-1.48.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "just",
+      "broken": false,
+      "derivation": "/nix/store/s2h1rridcsr36ni7pyhrm096kf5a4196-just-1.48.0.drv",
+      "description": "Handy way to save and run project-specific commands",
+      "install_id": "just",
+      "license": "CC0-1.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "just-1.48.0",
+      "pname": "just",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T04:40:55.476848Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.48.0",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/8msjp3nic600gl12hqhfh0h5qv62k0v7-just-1.48.0-doc",
+        "man": "/nix/store/agh66pc99fbqxwzacwqd23g8idaf2g4f-just-1.48.0-man",
+        "out": "/nix/store/40svbirpv7jnkl6f3w4b6mjzsb4l4lmh-just-1.48.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "just",
+      "broken": false,
+      "derivation": "/nix/store/4rszb6xba0ryq2csv97qlc8pv05fpi6k-just-1.48.0.drv",
+      "description": "Handy way to save and run project-specific commands",
+      "install_id": "just",
+      "license": "CC0-1.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "just-1.48.0",
+      "pname": "just",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T05:16:37.398212Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.48.0",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/ikdkyfzpzr2cxmd3l1wc223lz0nsxsbp-just-1.48.0-doc",
+        "man": "/nix/store/9rp4zvxxg3xr10wwvk9qsr2cr0h0h9d1-just-1.48.0-man",
+        "out": "/nix/store/gzp6qxmwl4hmy74c3gsz4w0jr2d6wl42-just-1.48.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "uv",
+      "broken": false,
+      "derivation": "/nix/store/xmvr9nnsm4yxzjfy4l478fn0pvmzg8mv-uv-0.11.2.drv",
+      "description": "Extremely fast Python package installer and resolver, written in Rust",
+      "install_id": "uv",
+      "license": "[ Apache-2.0, MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "uv-0.11.2",
+      "pname": "uv",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T03:39:47.320490Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.11.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/xn8z7nwi93k6hdqrcvpkl3y9qk3zhr5k-uv-0.11.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "uv",
+      "broken": false,
+      "derivation": "/nix/store/pixw3bb19ybimq2r92hgcybfq9hf6a5j-uv-0.11.2.drv",
+      "description": "Extremely fast Python package installer and resolver, written in Rust",
+      "install_id": "uv",
+      "license": "[ Apache-2.0, MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "uv-0.11.2",
+      "pname": "uv",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T04:13:16.487945Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.11.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/zpy7fkw340vjw45nz3dnvlzj28aq9p9m-uv-0.11.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "uv",
+      "broken": false,
+      "derivation": "/nix/store/9gy2q5aykbscq7lw7c02hyag4piqjhjz-uv-0.11.2.drv",
+      "description": "Extremely fast Python package installer and resolver, written in Rust",
+      "install_id": "uv",
+      "license": "[ Apache-2.0, MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "uv-0.11.2",
+      "pname": "uv",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T04:43:05.671280Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.11.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/vhixdscpv5zf4wygl66x4mc25kx8givn-uv-0.11.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "uv",
+      "broken": false,
+      "derivation": "/nix/store/6j0lmn6na0hqg9zf3jps16n5m6x1jgzq-uv-0.11.2.drv",
+      "description": "Extremely fast Python package installer and resolver, written in Rust",
+      "install_id": "uv",
+      "license": "[ Apache-2.0, MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "name": "uv-0.11.2",
+      "pname": "uv",
+      "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
+      "rev_count": 971119,
+      "rev_date": "2026-03-28T14:48:23Z",
+      "scrape_date": "2026-03-30T05:19:44.371383Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.11.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/bh0mb740hx20n4x0zp234wk0r33a8pi7-uv-0.11.2"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    }
+  ]
+}
