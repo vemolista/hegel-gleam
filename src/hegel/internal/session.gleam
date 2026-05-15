@@ -15,9 +15,9 @@ import hegel/internal/cbor
 import hegel/internal/protocol
 import logging
 
-const hegel_version: String = "0.6.1"
+const hegel_version: String = "0.9.1"
 
-const supported_protocol_version: String = "0.12"
+const supported_protocol_version: String = "0.15"
 
 pub const control_stream_id: Int = 0
 

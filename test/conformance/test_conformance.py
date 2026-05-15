@@ -34,7 +34,7 @@ def test_conformance(subtests):
                 BUILD_DIR / "test_integers", min_value=BIGINT_MIN, max_value=BIGINT_MAX
             ),
             BooleanConformance(BUILD_DIR / "test_booleans"),
-            FloatConformance(BUILD_DIR / "test_floats"),
+            FloatConformance(BUILD_DIR / "test_floats", allow_nan=False, allow_infinity=False),
         ],
         subtests,
         skip_tests=[

@@ -56,6 +56,14 @@ pub fn main() {
     Some(max) -> gen |> float_.max(max)
     None -> gen
   }
+  let gen = case params.exclude_min {
+    Some(True) -> gen |> float_.exclude_min()
+    _ -> gen
+  }
+  let gen = case params.exclude_max {
+    Some(True) -> gen |> float_.exclude_max()
+    _ -> gen
+  }
   let gen = float_.build(gen)
 
   hegel.run(hegel.Settings(test_cases: test_cases), fn(tc) {

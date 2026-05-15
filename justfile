@@ -33,7 +33,7 @@ build-conformance:
 	done
 
 check-conformance: build-conformance
-	uv run --with 'hegel-core>=0.4.0' --with pytest --with hypothesis \
+	uv run --with 'hegel-core>=0.9.1' --with pytest --with hypothesis \
 		pytest test/conformance/test_conformance.py -v
 
 conformance: check-conformance
