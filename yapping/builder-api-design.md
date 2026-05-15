@@ -409,8 +409,8 @@ exclusive flags) phantom types are an option — see the appendix.
 
 ## File-level change plan
 
-| Path                                                  | Action                                                                                      |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Path                                                 | Action                                                                                      |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | `src/hegel/internal/generator/core.gleam`            | Replace stubs with real opaque generator core, basic constructors, draw logic.              |
 | `src/hegel/generator.gleam`                          | New facade module with `Generator(a)`, `draw`, combinators.                                 |
 | `src/hegel/generator/bool_.gleam`                    | New module: `new() -> Generator(Bool)`.                                                     |
@@ -422,7 +422,7 @@ exclusive flags) phantom types are an option — see the appendix.
 | `src/hegel/generator/dict_.gleam`                    | New module: `Builder(k, v)`, sizing, `build`.                                               |
 | `src/hegel/generator/tuple_.gleam`                   | New module: `new2`..`new5`.                                                                 |
 | `src/hegel/generator/{bool,integer,float,...}.gleam` | Delete; migrate tests in the same change set.                                               |
-| `src/hegel.gleam`                                    | Re-export `draw` from `hegel/generator`.                                                   |
+| `src/hegel.gleam`                                    | Re-export `draw` from `hegel/generator`.                                                    |
 | `test/hegel/*_test.gleam`                            | Migrate imports and call sites.                                                             |
 
 ## Testing strategy

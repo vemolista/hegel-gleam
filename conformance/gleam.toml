@@ -1,6 +1,5 @@
 name = "conformance"
 
-
 [dependencies]
 gleam_stdlib = ">= 1.0.0 and < 2.0.0"
 hegel_gleam = { path = ".." }

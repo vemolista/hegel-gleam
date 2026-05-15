@@ -16,7 +16,7 @@ A property-based testing library for Gleam. Backed by Hypothesis, using the Hege
 <!-- import hegel -->
 
 <!-- pub fn main() -> Nil { -->
-  <!-- // TODO: An example of the project in use -->
+<!-- // TODO: An example of the project in use -->
 <!-- } -->
 <!-- ``` -->
 
@@ -30,6 +30,7 @@ A property-based testing library for Gleam. Backed by Hypothesis, using the Hege
 <!-- ``` -->
 
 ## todo
+
 - conformance/ package seems ugly to have in the root of another package, perhaps it should be somewhere else? However, placing it in hegel/src/ would mean shipping the conformance scripts with the library, which is ugly. We could place it in hegel/test/conformance, but then we have a gleam package inside another gleam package's test with a dependency on the package - yikes?
 - ./src/hegel/generator/integer.gleam has some encoding stuff that should most likely be in ./src/hegel/internal/cbor.gleam
 - use sceall instead of rolling own ffi for ports - have to figure out how to transfer ownership of the port
@@ -37,6 +38,7 @@ A property-based testing library for Gleam. Backed by Hypothesis, using the Hege
 - improve output error messages and test them with birdie
 
 ## todo generators
+
 - text
 - characters
 - dict
@@ -58,9 +60,11 @@ A property-based testing library for Gleam. Backed by Hypothesis, using the Hege
 - something like hypothesis from? is it even possible?
 
 done
+
 - ints
 - bools
 - floats - conformance pending https://github.com/hegeldev/hegel-core/pull/128
 
 ## next
+
 - text generators

@@ -6,11 +6,11 @@ import gleam/erlang/process
 import gleam/int
 import gleam/option
 import gleam/string
-import logging
 import hegel/internal/cbor
 import hegel/internal/recorder
 import hegel/internal/session
 import hegel/internal/test_case.{type TestCase, TestCase}
+import logging
 
 pub type Outcome {
   Valid(stream_id: Int)

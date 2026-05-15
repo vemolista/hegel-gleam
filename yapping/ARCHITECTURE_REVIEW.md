@@ -33,13 +33,13 @@ The high-level design is close to the right model for BEAM: one long-lived proce
 
 ## Actor archetype assessment
 
-| Process/module | Current role | Fit | Main concern |
-|---|---|---:|---|
-| `session` actor | Resource owner for the port, stream registry, pending replies, message IDs; also a router for inbound packets | Mixed | It owns the right state, but also contains routing policy, lifecycle, handshake, versioning, packet dispatch, stream allocation, and some failure behavior. |
-| `run` actor | Per-run coordinator | Mixed | It is partly a resource owner for run state, partly a router from run-stream events to case workers, and partly result formatter/error-policy owner. |
-| `case_worker` process | Worker | Good | It does one user-code execution and reports an outcome. It has some extra protocol completion details but is conceptually clear. |
-| `recorder` actor | Resource owner | Good but probably avoidable | It owns one list of drawn values, but it only exists for one case and could be replaced by local data if draw recording is made synchronous/local. |
-| OTP supervisor in `app` | Observer/supervisor | Thin but incomplete | It starts the session, but the child is temporary and session failure/recovery behavior is unclear. |
+| Process/module          | Current role                                                                                                  |                         Fit | Main concern                                                                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------- | --------------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `session` actor         | Resource owner for the port, stream registry, pending replies, message IDs; also a router for inbound packets |                       Mixed | It owns the right state, but also contains routing policy, lifecycle, handshake, versioning, packet dispatch, stream allocation, and some failure behavior. |
+| `run` actor             | Per-run coordinator                                                                                           |                       Mixed | It is partly a resource owner for run state, partly a router from run-stream events to case workers, and partly result formatter/error-policy owner.        |
+| `case_worker` process   | Worker                                                                                                        |                        Good | It does one user-code execution and reports an outcome. It has some extra protocol completion details but is conceptually clear.                            |
+| `recorder` actor        | Resource owner                                                                                                | Good but probably avoidable | It owns one list of drawn values, but it only exists for one case and could be replaced by local data if draw recording is made synchronous/local.          |
+| OTP supervisor in `app` | Observer/supervisor                                                                                           |         Thin but incomplete | It starts the session, but the child is temporary and session failure/recovery behavior is unclear.                                                         |
 
 The most important actor-archetype rule is: every process should have one job. hegel mostly follows this, but `session` and `run` are beginning to become “god processes with mailboxes”.
 

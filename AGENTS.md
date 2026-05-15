@@ -6,7 +6,7 @@
 
 The project uses `flox` to define [dependencies](./.flox/env/manifest.toml) needed to run this project.
 
-`just` is used as the command runner. When possible, use `just` commands to interact with the project. Use `just --list` to see a list of all available commands. 
+`just` is used as the command runner. When possible, use `just` commands to interact with the project. Use `just --list` to see a list of all available commands.
 
 - **Build:** `just build`
 - **Run:** `just run`
@@ -26,12 +26,14 @@ The library is strictly dependant on running the [`hegel-core`](https://github.c
 - The `recorder` actor owns a list of drawn values during a test case.
 
 File structure
+
 - `src/hegel.gleam` — public API (`given`, `run`, `Settings`, `draw`)
 - `src/hegel/internal/` — session actor, run worker, case worker, CBOR codec, protocol, recorder, test_case
 - `src/hegel/generator/` — value generators (bool_, int_, float_, ...)
 - `src/hegel_ffi.erl` — Erlang FFI for ports and ETS
 
 ## References
+
 CRITICAL: When you encounter a reference (e.g., ./rules/general.md), use your Read tool to load it on a need-to-know basis. They're relevant to the SPECIFIC task at hand.
 
 Instructions:
@@ -41,6 +43,7 @@ Instructions:
 - Follow references recursively when needed
 
 References:
+
 - Gleam language reference https://tour.gleam.run/everything/
 - Gleam patterns https://gleam.run/documentation/conventions-patterns-and-anti-patterns/
 - Gleam packages - ./build/packages/<package>

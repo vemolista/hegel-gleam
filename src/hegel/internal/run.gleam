@@ -7,13 +7,13 @@ import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/otp/actor
 import gleam/string
-import logging
 import hegel/internal/case_worker
 import hegel/internal/cbor
 import hegel/internal/protocol
 import hegel/internal/recorder
 import hegel/internal/session
 import hegel/internal/test_case.{type TestCase}
+import logging
 
 pub type InternalError {
   InternalError(stream_id: Option(Int), reason: String)
