@@ -67,4 +67,4 @@ done
 
 ## next
 
-- text generators
+- finish reviewing ./yapping/api-v1.md
