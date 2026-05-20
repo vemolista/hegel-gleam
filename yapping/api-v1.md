@@ -76,6 +76,10 @@ text_range(min: Int, max: Int)      -> Generator(String) // When min > max, swap
 
 Builder:
 
+
+### `characters`
+
+Same as `text`, but length 1.
 ```gleam
 text_new()                                                        -> StringBuilder
 text_min_size(builder: StringBuilder, n: Int)                     -> StringBuilder
