@@ -52,8 +52,8 @@ Builder:
 
 ```gleam
 float_new()                                    -> FloatBuilder
-float_min(builder: FloatBuilder, value: Float) -> FloatBuilder
-float_max(builder: FloatBuilder, value: Float) -> FloatBuilder
+float_min(builder: FloatBuilder, value: Float) -> FloatBuilder // When min > max, swap them so we do not return an error.
+float_max(builder: FloatBuilder, value: Float) -> FloatBuilder // When min > max, swap them so we do not return an error.
 float_exclude_min(builder: FloatBuilder)        -> FloatBuilder
 float_exclude_max(builder: FloatBuilder)        -> FloatBuilder
 float_build(builder: FloatBuilder)              -> Generator(Float)
@@ -65,42 +65,41 @@ Protocol fields: `min_value`, `max_value`, `exclude_min`, `exclude_max`.
 
 `exclude_min`/`exclude_max` are simple toggles (no Bool argument — they only turn on). This matches the protocol default of `false` and the fact that you'd never want to un-exclude after excluding in a pipeline.
 
-Validation in `float_build`:
-- `min <= max` when both set.
-
-### `string` (protocol: "string" schema)
+### `text` (protocol: "string" schema)
 
 Convenience:
 
 ```gleam
-string()                              -> Generator(String)
-string_range(min: Int, max: Int)      -> Generator(String) // When min > max, swap them so we do not return an error.
+text()                              -> Generator(String)
+text_range(min: Int, max: Int)      -> Generator(String) // When min > max, swap them so we do not return an error.
 ```
 
 Builder:
 
 ```gleam
-string_new()                                          -> StringBuilder
-string_min_size(builder: StringBuilder, n: Int)       -> StringBuilder
-string_max_size(builder: StringBuilder, n: Int)       -> StringBuilder
-string_min_codepoint(builder: StringBuilder, n: Int)  -> StringBuilder
-string_max_codepoint(builder: StringBuilder, n: Int)  -> StringBuilder
-string_categories(builder: StringBuilder, cs: List(String))             -> StringBuilder
-string_exclude_categories(builder: StringBuilder, cs: List(String))     -> StringBuilder
-string_include_characters(builder: StringBuilder, chars: String)       -> StringBuilder
-string_exclude_characters(builder: StringBuilder, chars: String)       -> StringBuilder
-string_codec(builder: StringBuilder, codec: String)                    -> StringBuilder
-string_build(builder: StringBuilder)                                    -> Generator(String)
+text_new()                                                        -> StringBuilder
+text_min_size(builder: StringBuilder, n: Int)                     -> StringBuilder
+text_max_size(builder: StringBuilder, n: Int)                     -> StringBuilder
+text_min_codepoint(builder: StringBuilder, n: Int)                -> StringBuilder
+text_max_codepoint(builder: StringBuilder, n: Int)                -> StringBuilder
+text_categories(builder: StringBuilder, cs: List(String))         -> StringBuilder
+text_exclude_categories(builder: StringBuilder, cs: List(String)) -> StringBuilder
+text_include_characters(builder: StringBuilder, chars: String)    -> StringBuilder
+text_exclude_characters(builder: StringBuilder, chars: String)    -> StringBuilder
+text_codec(builder: StringBuilder, codec: String)                 -> StringBuilder
+text_build(builder: StringBuilder)                                -> Generator(String)
 ```
 
 Protocol fields: `min_size`, `max_size`, `min_codepoint`, `max_codepoint`, `categories`, `exclude_categories`, `include_characters`, `exclude_characters`, `codec`.
 
 Validation in `string_build`:
 - `min_size <= max_size`.
-- `categories` and `exclude_categories` not both set.
+- `categories` and `exclude_categories` not both set. <-- could be handled with a phantom type instead, would give a compile time, instead of a runtime error
 - No overlap between `include_characters` and `exclude_characters`.
 
-Phantom types are an option for `categories`/`exclude_categories` mutual exclusion (see appendix in `builder-api-design.md`), but runtime validation in `build` is the default.
+### `characters`
+
+Same as `text`, but length 1.
 
 ### `binary` (protocol: "binary" schema)
 
@@ -146,17 +145,6 @@ dict(keys: Generator(k), values: Generator(v))                        -> Generat
 dict_bounded(keys: Generator(k), values: Generator(v), min: Int, max: Int) -> Generator(Dict(k, v))
 ```
 
-Builder:
-
-```gleam
-dict_new(keys: Generator(k), values: Generator(v))                   -> DictBuilder(k, v)
-dict_min_size(builder: DictBuilder(k, v), n: Int)                     -> DictBuilder(k, v)
-dict_max_size(builder: DictBuilder(k, v), n: Int)                     -> DictBuilder(k, v)
-dict_build(builder: DictBuilder(k, v))                                -> Generator(Dict(k, v))
-```
-
-Protocol fields: `keys`, `values`, `min_size`, `max_size`.
-
 ### `tuple`
 
 No builder — just fixed-arity constructors:
@@ -185,13 +173,13 @@ May want a builder later for `fullmatch` and alphabet config, but `regex(pattern
 These have no configurable fields (or very few), so no builders:
 
 ```gleam
-email()              -> Generator(String)
-url()                -> Generator(String)
-domain()             -> Generator(String)
-ip_address(version: Int) -> Generator(String)    // version: 4 or 6
-date()               -> Generator(String)
-time()               -> Generator(String)
-datetime()           -> Generator(String)
+email()                               -> Generator(String)
+url()                                 -> Generator(String)
+domain()                              -> Generator(String)
+ip_address(version: IpAddressVersion) -> Generator(String)    // version: 4 or 6
+date()                                -> Generator(String)
+time()                                -> Generator(String)
+datetime()                            -> Generator(String)
 ```
 
 `domain` has an optional `max_length` — could add `domain_max_length` later or a small builder if needed.
@@ -201,13 +189,13 @@ datetime()           -> Generator(String)
 Operate on `Generator(a)` only. No builder involvement.
 
 ```gleam
-map(gen: Generator(a), f: fn(a) -> b)           -> Generator(b)
+map(gen: Generator(a), f: fn(a) -> b)                 -> Generator(b)
 flat_map(gen: Generator(a), f: fn(a) -> Generator(b)) -> Generator(b)
 filter(gen: Generator(a), predicate: fn(a) -> Bool)   -> Generator(a)
-one_of(generators: List(Generator(a)))           -> Generator(a)
-just(value: a)                                   -> Generator(a)
-sampled_from(options: List(a))                   -> Generator(a)
-optional(element: Generator(a))                  -> Generator(Option(a))
+one_of(generators: List(Generator(a)))                -> Generator(a)
+just(value: a)                                        -> Generator(a)
+sampled_from(options: List(a))                        -> Generator(a)
+optional(element: Generator(a))                       -> Generator(Option(a))
 ```
 
 ## Test API

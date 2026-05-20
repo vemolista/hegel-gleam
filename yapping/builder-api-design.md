@@ -171,6 +171,8 @@ pub opaque type Builder {
 pub fn new() -> Builder
 pub fn min_size(builder: Builder, n: Int) -> Builder
 pub fn max_size(builder: Builder, n: Int) -> Builder
+pub fn include_characters(builder: Builder, chars: List(String)) -> Builder
+pub fn exclude_characters(builder: Builder, chars: List(String)) -> Builder
 pub fn categories(builder: Builder, cs: List(Category)) -> Builder
 pub fn exclude_categories(builder: Builder, cs: List(Category)) -> Builder
 pub fn build(builder: Builder) -> Generator(String)
@@ -487,11 +489,11 @@ pub fn max_size(b: Builder(c), n: Int) -> Builder(c) {
 }
 
 // Transitions: only callable from the unset state
-pub fn categories(b: Builder(CharsUnset), cs: List(Category)) -> Builder(CharsIncluded) {
+pub fn include_characters(b: Builder(CharsUnset), cs: List(Category)) -> Builder(CharsIncluded) {
   Builder(..b, include: Some(cs))
 }
 
-pub fn exclude_categories(b: Builder(CharsUnset), cs: List(Category)) -> Builder(CharsExcluded) {
+pub fn exclude_characters(b: Builder(CharsUnset), cs: List(Category)) -> Builder(CharsExcluded) {
   Builder(..b, exclude: Some(cs))
 }
 
